@@ -14,6 +14,7 @@ class FeedsController < ApplicationController
 
   def show_all
     @feed = Feed.all #no deberia ser necesario porque index se ejecuta antes.
+    #sort by
   end
 
   # GET /feeds/new
