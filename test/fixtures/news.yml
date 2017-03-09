@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyString
+  bajada: MyString
+  cuerpo: MyText
+  fecha: 2017-03-09
+  hora: 2017-03-09 08:41:03
+
+two:
+  titulo: MyString
+  bajada: MyString
+  cuerpo: MyText
+  fecha: 2017-03-09
+  hora: 2017-03-09 08:41:03
