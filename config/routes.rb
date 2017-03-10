@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   #root "welcome#index"
   root 'feeds#index'
 
+  get 'feeds/mostrar'
+  #get 'feeds/mostrar' => "feeds#mostrar"
+
 end

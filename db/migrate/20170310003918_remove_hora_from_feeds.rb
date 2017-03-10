@@ -1,0 +1,5 @@
+class RemoveHoraFromFeeds < ActiveRecord::Migration[5.0]
+  def change
+    remove_column :feeds, :hora, :time
+  end
+end

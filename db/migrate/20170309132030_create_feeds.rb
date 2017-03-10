@@ -4,10 +4,8 @@ class CreateFeeds < ActiveRecord::Migration[5.0]
       t.string :titulo
       t.string :bajada
       t.text :cuerpo
-      t.date :fecha
-      t.time :hora
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

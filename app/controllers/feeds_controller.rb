@@ -1,10 +1,13 @@
 class FeedsController < ApplicationController
   before_action :set_feed, only: [:show, :edit, :update, :destroy]
 
+
+
   # GET /feeds
   # GET /feeds.json
   def index
     @feeds = Feed.all
+    @feed_sort = Feed.order('created_at DESC')
   end
 
   # GET /feeds/1
@@ -12,10 +15,7 @@ class FeedsController < ApplicationController
   def show
   end
 
-  def show_all
-    @feed = Feed.all #no deberia ser necesario porque index se ejecuta antes.
-    #sort by
-  end
+
 
   # GET /feeds/new
   def new
@@ -25,6 +25,7 @@ class FeedsController < ApplicationController
   # GET /feeds/1/edit
   def edit
   end
+
 
   # POST /feeds
   # POST /feeds.json
@@ -72,8 +73,9 @@ class FeedsController < ApplicationController
       @feed = Feed.find(params[:id])
     end
 
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def feed_params
-      params.require(:feed).permit(:titulo, :bajada, :cuerpo, :fecha, :hora)
+      params.require(:feed).permit(:titulo, :bajada, :cuerpo)
     end
 end
