@@ -7,12 +7,14 @@ class FeedsController < ApplicationController
   # GET /feeds.json
   def index
     @feeds = Feed.all
-    @feed_sort = Feed.order('created_at DESC')
+    @feed_sort = Feed.order('created_at DESC').take(10)
   end
 
   # GET /feeds/1
   # GET /feeds/1.json
   def show
+    #show comments.
+    @comm = Comment.where(feed_id: @feed.id)
   end
 
 
